@@ -1,2 +1,3 @@
-const retrunHowManyArguments = (...args) => args.length;
-export default retrunHowManyArguments;
+export default function retrunHowManyArguments() {
+  return arguments.length;
+}

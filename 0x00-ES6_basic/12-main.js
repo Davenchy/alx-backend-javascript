@@ -3,7 +3,7 @@ import createReportObject from './12-createReportObject';
 
 const employees = {
   ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-  ...createEmployeesObject('marketing', ['Sylvie'])
+  ...createEmployeesObject('marketing', ['Sylvie']),
 };
 
 const report = createReportObject(employees);

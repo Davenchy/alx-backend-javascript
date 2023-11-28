@@ -1,3 +1,3 @@
-export default function retrunHowManyArguments() {
-  return arguments.length;
+export default function retrunHowManyArguments(...args) {
+  return args.length;
 }

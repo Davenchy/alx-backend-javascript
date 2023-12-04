@@ -3,5 +3,5 @@ export default function cleanSet(set, startString) {
   return Array.from(set)
     .filter((item) => item.startsWith(startString))
     .map((item) => String(item).substring(startString.length))
-    .join("-");
+    .join('-');
 }

@@ -61,3 +61,13 @@ function executeWork(employee: Director | Teacher): string {
 
 executeWork(createEmployee(200)); // Getting to work
 executeWork(createEmployee(1000)); // Getting to director tasks
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') return 'Teaching Math';
+  if (todayClass === 'History') return 'Teaching History';
+}
+
+teachClass('Math'); // Teaching Math
+teachClass('History'); // Teaching History

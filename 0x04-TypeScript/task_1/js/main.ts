@@ -53,3 +53,26 @@ interface printTeacherFunction {
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
+
+interface IStudentClassConstructor {
+  new(firstName: string, lastName: string): StudentClass;
+}
+
+interface IStudentClass {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass {
+  constructor(public firstName: string, public lastName: string) { }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}

@@ -65,7 +65,7 @@ const app = http.createServer((req, res) => {
   const pathname = getUrlPathname(req);
 
   if (pathname === '/') {
-    res.end('Hello Holberton School!\n');
+    res.end('Hello Holberton School!');
   } else if (pathname === '/students') {
     handleStudentsPath(res);
   }

@@ -50,13 +50,16 @@ const handleStudentsPath = (res) => {
   return readRows(databaseName)
     .then(parseRows)
     .then(({ fields, studentCount }) => {
-      sendln(`Number of students: ${studentCount}`);
+      const msg = [];
+      msg.push(`Number of students: ${studentCount}`);
 
       for (const field of Object.keys(fields)) {
         const studentNames = fields[field];
-        res.write(`Number of students in ${field}: ${
+        msg.push(`Number of students in ${field}: ${
           studentNames.length}. List: ${studentNames.join(', ')}`);
       }
+
+      res.write(msg.join('\n'));
     }).catch((err) => res.write(err.message))
     .finally(() => res.end());
 };

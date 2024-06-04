@@ -2,12 +2,11 @@ import readDatabase from '../utils';
 
 class StudentsController {
   static getAllStudents(request, response) {
-
     readDatabase(request.databaseName).then((fields) => {
       const msgs = [];
       const fieldNames = Object.keys(fields).sort();
 
-      msgs.push('This is the list of our students\n');
+      msgs.push('This is the list of our students');
 
       for (const field of fieldNames) {
         const count = fields[field].length;

@@ -13,7 +13,7 @@ const countStudents = (path) => {
     const fieldIndex = labels.indexOf('field');
 
     if (firstNameIndex === -1 || fieldIndex === -1) {
-      throw new Error('Invalid CSV file');
+      throw new Error();
     }
 
     let studentCount = 0;
@@ -41,7 +41,7 @@ const countStudents = (path) => {
         studentNames.length}. List: ${studentNames.join(', ')}`);
     }
   } catch (err) {
-    console.log('Cannot load the database');
+    throw new Error('Cannot load the database');
   }
 };
 

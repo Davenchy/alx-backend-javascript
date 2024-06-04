@@ -54,10 +54,10 @@ const handleStudentsPath = (res) => {
 
       for (const field of Object.keys(fields)) {
         const studentNames = fields[field];
-        sendln(`Number of students in ${field}: ${
+        res.write(`Number of students in ${field}: ${
           studentNames.length}. List: ${studentNames.join(', ')}`);
       }
-    }).catch((err) => sendln(err.message))
+    }).catch((err) => res.write(err.message))
     .finally(() => res.end());
 };
 

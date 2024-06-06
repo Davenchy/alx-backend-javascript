@@ -109,10 +109,10 @@ describe('Test with type equal to DIVIDE', function() {
   });
 
   it('should return Error', function() {
-    expect(calc(type, 0.2, -0.3)).to.equal('Error');
+    expect(calc(type, 0.2, -0.3)).to.be.a('string').that.equal('Error');
   });
 
   it('should return Error', function() {
-    expect(calc(type, 1.4, 0)).to.equal('Error');
+    expect(calc(type, 1.4, 0)).to.be.a('string').that.equal('Error');
   })
 });
